@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 // import { userAuth } from "../Context/AuthContext";
+// import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 const Movie = ({ item }) => {
-  const [like, setLike] = useState(false);
-  const [save, setSave] = useState(false);
+  // const [like, setLike] = useState(false);
+  // const [save, setSave] = useState(false);
   // const { user } = userAuth();
 
   // const saveShow = async ()=>{
@@ -11,8 +12,6 @@ const Movie = ({ item }) => {
   //     setLike(!like)
   //     setSave(true)
 
-
-      
   //   }
   // }
   return (
@@ -27,11 +26,12 @@ const Movie = ({ item }) => {
         <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
           {item?.title}
         </p>
-        {/* <p onClick={saveShow}>
+        {/* <p 
+        onClick={saveShow}>
           {like ? (
-            <FaHeart className='absolute top-4 left-4 text-gray-300' />
+            <FaHeart className="absolute top-4 left-4 text-gray-300" />
           ) : (
-            <FaRegHeart className='absolute top-4 left-4 text-gray-300' />
+            <FaRegHeart className="absolute top-4 left-4 text-gray-300" />
           )}
         </p> */}
       </div>
