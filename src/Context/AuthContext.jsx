@@ -1,5 +1,5 @@
 import { auth, db, doc, setDoc } from "firebase/firestore";
-import { useContext, createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -45,8 +45,4 @@ export function AuthContextProvider({ children }) {
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function userAuth() {
-  return useContext(AuthContext);
 }

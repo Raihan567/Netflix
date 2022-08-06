@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center absolute z-[100] w-full p-4 cursor-pointer">
+    <div className="flex justify-between items-center  z-[100] w-full p-4 cursor-pointer sticky top-0 bg-black">
       <h1 className="text-red-600 font-bold uppercase text-4xl ">Netflix</h1>
       <div>
         <button className="text-white mr-3 ">Sign In </button>

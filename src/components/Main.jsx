@@ -21,22 +21,21 @@ const Main = () => {
     }
   };
 
-  console.log(movie?.title);
+  console.log(movie);
   return (
     <div className="w-full h-[600px] text-white">
       <div className="w-full h-full ">
-        <div className="absolute w-full h-[600px] ">
-          <img
-            className="w-full h-full object-cover "
-            src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
-            alt={movie?.title}
-          />
-        </div>
+        <div className="absolute w-full h-[600px] bg-gradient-to-r from-black"></div>
+        <img
+          className="w-full h-full object-cover "
+          src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
+          alt={movie?.title}
+        />
 
         <div className="w-full p-4 md:p-8 absolute top-[20%]">
           <h1 className="text-3xl font-bold md:text-5xl">{movie?.title}</h1>
           <div className="my-4">
-            <button className="bg-red-600 py-2 px-5 rounded border border-red-100">
+            <button className="bg-red-600 py-2 px-5 rounded border border-red-600">
               Play now
             </button>
             <button className="border border-red-600 py-2 px-5 ml-3 rounded">
@@ -46,8 +45,21 @@ const Main = () => {
           <p className="text-sm text-gray-400">
             Released: {movie?.release_date}
           </p>
+          <p className="text-sm text-gray-400">
+            Popularity: {movie?.popularity}
+          </p>
+          <p className="text-sm text-gray-400">
+            Average vote: {movie?.vote_average}
+          </p>
+          <p className="text-sm text-gray-400">
+            Vote count: {movie?.vote_count}
+          </p>
+          <p className="text-md md:text-xl">
+            Language: {movie?.original_language}
+          </p>
+
           <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">
-            {truncateString(movie?.overview, 150)}
+            {truncateString(movie?.overview, 220)}
           </p>
         </div>
       </div>
